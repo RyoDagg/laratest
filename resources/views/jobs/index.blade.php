@@ -5,7 +5,7 @@
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         @foreach ($jobs as $job)
-            <a href="/job/{{ $job['id'] }}"
+            <a href="/jobs/{{ $job['id'] }}"
                 class='border p-4 rounded-lg bg-gray-50 hover:shadow transition duration-300'>
                 <div class="text-sm text-blue-500 font-bold">{{ $job->employer->name }}</div>
                 <div class="text-gray-800">
