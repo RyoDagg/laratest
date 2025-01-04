@@ -11,7 +11,7 @@
                 <p class="mt-1 text-sm/6 text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
 
                 <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-                    <x-form-input label="Email" placeholder="" name="email" type='email' required />
+                    <x-form-input label="Email" placeholder="" name="email" type='email' :value="old('email')" required />
                     <x-form-input label="Password" placeholder="" name="password" type="password" required />
                 </div>
 
@@ -30,7 +30,7 @@
         <div class="mt-6 flex items-center justify-end gap-x-6">
             <a href="/" class="text-sm/6 font-semibold text-gray-900">Cancel</a>
             <button type="submit"
-                class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Save</button>
+                class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Login</button>
         </div>
     </form>
 
