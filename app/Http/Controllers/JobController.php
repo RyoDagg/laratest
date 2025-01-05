@@ -16,7 +16,6 @@ class JobController extends Controller
 
     public function create()
     {
-
         return view('jobs.create');
     }
 
@@ -49,7 +48,6 @@ class JobController extends Controller
 
     public function update(Job $job)
     {
-
         request()->validate([
             'title' => ['required', 'min:3'],
             'salary' => ['required',],

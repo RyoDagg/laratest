@@ -5,7 +5,9 @@
 
     <strong>{{ $job['title'] }}</strong> Pays {{ $job['salary'] }}
 
-    <div class="mt-4">
-        <x-link-button href="/jobs/{{ $job['id'] }}/edit">Edit</x-link-button>
-    </div>
+    {{-- @can('edit-job', $job) --}}
+        <div class="mt-4">
+            <x-link-button href="/jobs/{{ $job['id'] }}/edit">Edit</x-link-button>
+        </div>
+    {{-- @endcan --}}
 </x-layout>
