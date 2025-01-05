@@ -11,10 +11,10 @@ Route::controller(JobController::class)->group(function () {
     Route::get('/jobs', 'index');
     Route::get('/jobs/create', 'create')->middleware('auth');
     Route::get('/jobs/{job}', 'show');
-    Route::get('/jobs/{job}/edit', 'edit')->middleware('auth')->can('edit-job,job');
+    Route::get('/jobs/{job}/edit', 'edit')->middleware('auth')->can('edit,job');
     Route::post('/jobs', 'store');
-    Route::patch('/jobs/{job}', 'update')->middleware('auth', 'can:edit-job,job');
-    Route::delete('/jobs/{job}', 'destroy')->middleware('auth')->can('edit-job,job');
+    Route::patch('/jobs/{job}', 'update')->middleware('auth', 'can:edit,job');
+    Route::delete('/jobs/{job}', 'destroy')->middleware('auth')->can('edit,job');
 });
 
 // Route::resource('jobs', JobController::class)->only(['index', 'show']);

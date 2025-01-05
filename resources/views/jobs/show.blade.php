@@ -5,9 +5,9 @@
 
     <strong>{{ $job['title'] }}</strong> Pays {{ $job['salary'] }}
 
-    {{-- @can('edit-job', $job) --}}
+    @can('edit', $job)
         <div class="mt-4">
             <x-link-button href="/jobs/{{ $job['id'] }}/edit">Edit</x-link-button>
         </div>
-    {{-- @endcan --}}
+    @endcan
 </x-layout>
