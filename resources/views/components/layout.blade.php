@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://laracasts.com/images/logo/logo-triangle.svg" type="image/x-icon">
     <title>Laravel</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    @vite(['resources/js/app.js'])
 </head>
 
 <body class="h-full">
