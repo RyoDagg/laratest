@@ -3,9 +3,17 @@
 use App\Http\Controllers\JobController;
 use App\Http\Controllers\RegisteredUserController;
 use App\Http\Controllers\SessionController;
+use App\Jobs\JobAction;
+use App\Models\Job;
 use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'home');
+
+Route::get('/test', function () {
+    $job = Job::first();
+    JobAction::dispatch($job);
+    return 'JobAction dispatched!';
+});
 
 Route::controller(JobController::class)->group(function () {
     Route::get('/jobs', 'index');
